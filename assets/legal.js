@@ -1,0 +1,21 @@
+const menuButton=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.site-header nav');
+const header=document.querySelector('.site-header');
+const legalHero=document.querySelector('.legal-hero');
+const article=document.querySelector('.legal-article');
+const progressBar=document.querySelector('.reading-progress i');
+const tocLinks=[...document.querySelectorAll('.legal-toc a')];
+function closeMenu(returnFocus=false){nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');if(returnFocus)menuButton.focus();}
+menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>closeMenu()));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open'))closeMenu(true);});
+document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();});
+const menuMedia=window.matchMedia('(max-width:1200px)');
+if(menuMedia.addEventListener)menuMedia.addEventListener('change',()=>closeMenu());else menuMedia.addListener(()=>closeMenu());
+let frame;
+const updateReadingState=()=>{frame=0;const top=window.scrollY||document.documentElement.scrollTop||0;header.classList.toggle('is-scrolled',top>24);if(progressBar&&article){const articleTop=article.getBoundingClientRect().top+top;const total=Math.max(article.offsetHeight-window.innerHeight,1);progressBar.style.width=`${Math.min(100,Math.max(0,((top-articleTop+window.innerHeight*.35)/total)*100))}%`;}const threshold=108;let current=tocLinks[0];tocLinks.forEach(link=>{const target=document.getElementById(link.getAttribute('href').slice(1));if(target&&target.getBoundingClientRect().top<=threshold)current=link;});tocLinks.forEach(link=>{const active=link===current;link.classList.toggle('is-active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});};
+window.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(updateReadingState);},{passive:true});
+tocLinks.forEach(link=>link.addEventListener('click',()=>{const parent=link.closest('details');if(parent)parent.open=false;}));
+updateReadingState();
+const copyrightYear=document.getElementById('copyright-year');
+if(copyrightYear)copyrightYear.textContent=new Date().getFullYear();

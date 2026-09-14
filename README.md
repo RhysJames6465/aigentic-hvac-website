@@ -1,22 +1,24 @@
-# Aigentic Campaign HVAC Website
+# Aigentic HVAC Website
 
-Conversion-focused website for Aigentic Campaign's HVAC lead recovery, missed-call response, lead nurturing, reviews and appointment-booking services.
+Public marketing website for Aigentic Campaign's HVAC lead-recovery services.
 
 ## Deployment
 
-This is a static website designed for deployment on Vercel.
+This repository contains a static website at the repository root.
 
+For Vercel:
 - Framework preset: Other
 - Build command: none
 - Output directory: repository root
 
-## Routes
+## Current integration status
 
-- `/` — main website
-- `/contact/` — contact page
-- `/privacy/` — privacy policy
-- `/terms/` — terms of use
+The site includes placeholders for the verified GoHighLevel calendar URL and contact-form endpoint. Until those values are configured, booking and form submission remain clearly marked as unavailable rather than silently discarding enquiries.
 
-## Integration status
+## Business
 
-The GoHighLevel calendar and contact-form endpoint are intentionally unconfigured. Add production integration values securely through the hosting platform; never commit credentials or private webhook URLs to this repository.
+Aigentic Campaign  
+Legal entity: A Rhys James  
+ABN 61 727 181 363  
+Redfern, NSW, Australia  
+hello@aigenticcampaign.com

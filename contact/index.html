@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Aigentic Campaign | HVAC Growth Systems</title>
+  <meta name="description" content="Contact Aigentic Campaign about HVAC lead recovery, missed-call response, AI-assisted nurturing, partnerships, support or privacy requests.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/#top" aria-label="Aigentic Campaign home"><img class="brand-logo" src="../assets/aigentic-header-dark.svg" alt="Aigentic Campaign"></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
+    <nav id="primary-navigation" aria-label="Primary navigation">
+      <a href="/#calculator">ROI calculator</a>
+      <a href="/#system">How it works</a>
+      <a href="/#services">Solutions</a>
+      <a href="/#about">About</a>
+      <a href="/contact" aria-current="page">Contact</a>
+      <a class="nav-cta" href="/#book">Schedule HVAC growth call <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="contact-stage" aria-labelledby="contact-title">
+      <div class="contact-layout">
+        <div class="contact-copy-panel">
+          <p class="eyebrow"><span></span> GET IN TOUCH</p>
+          <h1 id="contact-title">How can we help?</h1>
+          <p class="contact-copy">Use this form for general enquiries, existing-client support, partnerships, referrals or privacy requests. We aim to respond within two business days.</p>
+          <dl class="contact-details">
+            <dt>Email</dt><dd><a href="mailto:hello@aigenticcampaign.com">hello@aigenticcampaign.com</a></dd>
+            <dt>Telephone</dt><dd><a href="tel:+61478898136">+61 478 898 136</a></dd>
+            <dt>Location</dt><dd>Redfern, NSW, Australia</dd>
+          </dl>
+        </div>
+
+        <div class="contact-form-card">
+          <h2>Send an enquiry</h2>
+          <p>Tell us what you need and include enough detail for a useful first response.</p>
+          <form class="contact-form" id="contact-form" novalidate data-state="default">
+            <div class="contact-form-grid">
+              <label for="contact-name">Name <span class="field-required" aria-hidden="true">*</span><input id="contact-name" name="name" type="text" autocomplete="name" required maxlength="120"></label>
+              <label for="contact-business">Business name <span class="field-required" aria-hidden="true">*</span><input id="contact-business" name="business_name" type="text" autocomplete="organization" required maxlength="160"></label>
+              <label for="contact-email">Work email <span class="field-required" aria-hidden="true">*</span><input id="contact-email" name="work_email" type="email" autocomplete="email" required maxlength="254"></label>
+              <label for="contact-mobile">Mobile number <span class="field-optional">(optional)</span><input id="contact-mobile" name="mobile_number" type="tel" autocomplete="tel" maxlength="30"></label>
+              <label for="contact-website">Website <span class="field-optional">(optional)</span><input id="contact-website" name="website" type="url" autocomplete="url" inputmode="url"></label>
+              <label for="contact-type">Enquiry type <span class="field-required" aria-hidden="true">*</span><select id="contact-type" name="enquiry_type" required><option value="">Choose an enquiry type</option><option>HVAC growth enquiry</option><option>Existing-client support</option><option>Partnership or referral</option><option>Privacy or data request</option><option>Something else</option></select></label>
+            </div>
+            <label for="contact-message">Message <span class="field-required" aria-hidden="true">*</span><textarea id="contact-message" name="message" required maxlength="4000"></textarea></label>
+
+            <fieldset class="contact-sms">
+              <legend>Text message preferences <span class="field-optional">, optional</span></legend>
+              <label class="contact-checkbox"><input type="checkbox" name="enquiry_sms_consent" value="true"><span>I agree to receive enquiry-related text messages from Aigentic Campaign, including responses, booking updates, appointment confirmations and reminders. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.</span></label>
+              <label class="contact-checkbox"><input type="checkbox" name="marketing_sms_consent" value="true"><span>I agree to receive marketing text messages from Aigentic Campaign, including relevant service updates and offers. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase.</span></label>
+              <p class="contact-policy-links">Read the <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Use</a>.</p>
+            </fieldset>
+
+            <label class="contact-consent"><input id="privacy-acknowledgement" name="privacy_acknowledgement" type="checkbox" value="true" required><span>I acknowledge that Aigentic Campaign will use the information I provide to respond to my enquiry in accordance with the <a href="/privacy">Privacy Policy</a>. <span class="field-required" aria-hidden="true">*</span></span></label>
+            <div id="contact-error" class="contact-error" role="alert" tabindex="-1" hidden></div>
+            <p id="contact-form-status" class="contact-form-status" role="status">Private preview: form delivery is awaiting the approved contact endpoint. Nothing is sent from this preview.</p>
+            <button class="button button-primary" type="submit" id="contact-submit">Send enquiry</button>
+          </form>
+        </div>
+
+        <aside class="contact-growth" aria-labelledby="growth-title">
+          <h2 id="growth-title">Want to discuss an HVAC growth opportunity?</h2>
+          <p>If you have an established HVAC business and want to identify where enquiries, missed calls or dormant leads are being lost, schedule an HVAC growth call.</p>
+          <a class="button button-primary" id="contact-growth-cta" href="/#book">Schedule your HVAC growth call now <span>↗</span></a>
+          <p class="contact-growth-status" id="contact-growth-status">Private preview: the booking calendar is not connected yet.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-identity"><a class="brand" href="/#top" aria-label="Aigentic Campaign home"><img class="brand-logo footer-brand-logo" src="../assets/aigentic-header-dark.svg" alt="Aigentic Campaign"></a><p>Lead recovery and appointment systems for established HVAC contractors.</p></div>
+    <nav aria-label="Footer solutions"><h2>Solutions</h2><a href="/#database-reactivation">Database Reactivation</a><a href="/#missed-call-recovery">Missed-Call Recovery &amp; AI Appointment Booking</a><a href="/#lead-nurturing">AI Lead Nurturing</a><a href="/#reviews-referrals">Reviews &amp; Referrals</a><a href="/#paid-advertising">Paid Advertising</a></nav>
+    <nav aria-label="Footer company"><h2>Company</h2><a href="/#about">About</a><a href="/contact">Contact</a></nav>
+    <div class="footer-legal"><h2>Legal</h2><nav aria-label="Legal documents"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Use</a></nav></div>
+    <div class="footer-contact"><h2>Contact</h2><div id="verified-contact"><a href="mailto:hello@aigenticcampaign.com">hello@aigenticcampaign.com</a><a href="tel:+61478898136">+61 478 898 136</a><p>Redfern, NSW, Australia</p></div></div>
+    <p class="footer-bottom">© <span id="copyright-year"></span> Aigentic Campaign. Illustrative models and demonstrations are not client results or guarantees.</p>
+  </footer>
+  <script src="../assets/config.js"></script>
+  <script src="../assets/legal.js"></script>
+  <script src="../assets/contact.js"></script>
+</body>
+</html>
